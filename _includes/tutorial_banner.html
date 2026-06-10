@@ -1,0 +1,41 @@
+{% assign banner = page.tutorial_banner %}
+{% assign banner_image = banner.image | default: page.tutorial_image | default: page.image %}
+{% assign banner_caption = banner.caption | default: page.tutorial_caption | default: page.caption %}
+{% assign banner_alt = banner.alt | default: page.alt | default: page.title %}
+{% assign banner_title = banner.title | default: page.title %}
+{% assign banner_lead = banner.lead | default: page.description | default: banner_caption %}
+{% assign banner_eyebrow = banner.eyebrow | default: page.section | replace: '_', ' ' | upcase | default: 'Tutorial' %}
+{% assign youtube_input = banner.youtube | default: page.tutorial_video | default: page.youtube %}
+{% assign youtube_id = '' %}
+
+{% if youtube_input %}
+  {% if youtube_input contains 'youtu.be/' %}
+    {% assign youtube_id = youtube_input | split: 'youtu.be/' | last | split: '?' | first %}
+  {% elsif youtube_input contains 'watch?v=' %}
+    {% assign youtube_id = youtube_input | split: 'watch?v=' | last | split: '&' | first %}
+  {% elsif youtube_input contains '/embed/' %}
+    {% assign youtube_id = youtube_input | split: '/embed/' | last | split: '?' | first %}
+  {% else %}
+    {% assign youtube_id = youtube_input %}
+  {% endif %}
+{% endif %}
+
+{% if youtube_id != '' or banner_image %}
+<section class="hero hero--media" aria-label="Tutorial media">
+  <div class="hero__inner">
+    <span class="hero__eyebrow">{{ banner_eyebrow }}</span>
+    <h2 class="hero__title">{{ banner_title }}</h2>
+    {% if banner_lead %}<p class="hero__lead">{{ banner_lead }}</p>{% endif %}
+  </div>
+  <div class="hero__media">
+    {% if youtube_id != '' %}
+      <a href="https://www.youtube.com/watch?v={{ youtube_id }}" target="_blank" rel="noopener" aria-label="Open tutorial video on YouTube">
+        <img class="hero__media-image" src="https://i.ytimg.com/vi/{{ youtube_id }}/hqdefault.jpg" alt="{{ banner_alt }}" referrerpolicy="strict-origin-when-cross-origin">
+        <span class="hero__media-play-icon" aria-hidden="true"></span>
+      </a>
+    {% elsif banner_image %}
+      <img class="hero__media-image" src="{{ banner_image }}" alt="{{ banner_alt }}">
+    {% endif %}
+  </div>
+</section>
+{% endif %}

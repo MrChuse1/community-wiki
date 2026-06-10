@@ -1,0 +1,67 @@
+---
+layout: null
+excluded_in_search: true
+---
+/* Code highlighting (Rouge / kramdown) — dark theme */
+
+.highlight, .highlight pre { background: transparent !important; color: #d4d8df; }
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+
+/* Comments */
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf,
+.highlight .cm, .highlight .c1, .highlight .cs { color: #6a737d; font-style: italic; }
+.highlight .cp { color: #5eead4; font-weight: 600; }
+
+/* Errors */
+.highlight .err { color: #ff6b6b; background-color: transparent; }
+
+/* Generic */
+.highlight .gd { color: #ffc4c4; background-color: rgba(255, 0, 0, 0.08); }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #ff5470; }
+.highlight .gh { color: #67e8f9; font-weight: 600; }
+.highlight .gi { color: #b9f0c2; background-color: rgba(0, 255, 0, 0.06); }
+.highlight .go { color: #98a1ad; }
+.highlight .gp { color: #98a1ad; }
+.highlight .gs { font-weight: 600; }
+.highlight .gu { color: #5eead4; font-weight: 600; }
+.highlight .gt { color: #ff5470; }
+
+/* Keywords */
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kv { color: #ff7a45; font-weight: 600; }
+.highlight .kt { color: #99f6e4; font-weight: 600; }
+
+/* Numbers */
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .mo, .highlight .mx, .highlight .il { color: #67e8f9; }
+
+/* Strings */
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .sd,
+.highlight .s1, .highlight .s2, .highlight .se, .highlight .sh,
+.highlight .si, .highlight .sx, .highlight .dl { color: #b9f0c2; }
+.highlight .sr { color: #b9f0c2; }
+.highlight .ss { color: #5eead4; }
+
+/* Names */
+.highlight .na { color: #67e8f9; }
+.highlight .bp { color: #98a1ad; }
+.highlight .nb { color: #2dd4bf; }
+.highlight .nc { color: #99f6e4; font-weight: 600; }
+.highlight .no { color: #ffb86c; }
+.highlight .nd { color: #5eead4; font-weight: 600; }
+.highlight .ni { color: #5eead4; }
+.highlight .ne { color: #ff5470; font-weight: 600; }
+.highlight .nf, .highlight .fm { color: #ffb86c; font-weight: 600; }
+.highlight .nl { color: #ffb86c; }
+.highlight .nn { color: #98a1ad; }
+.highlight .nt { color: #67e8f9; }
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: #2dd4bf; }
+
+/* Operators / punctuation */
+.highlight .o, .highlight .ow { color: #ff7a45; }
+.highlight .p { color: #d4d8df; }
+
+/* Whitespace */
+.highlight .w { color: transparent; }

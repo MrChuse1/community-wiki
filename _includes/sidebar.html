@@ -1,0 +1,48 @@
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <form class="sidebar__search" onsubmit="return false;">
+    <input type="search" class="js-search" placeholder="Search this site…" aria-label="Search this site">
+  </form>
+
+  <nav class="nav-tree" aria-label="Documentation tree">
+    {% assign current = page.url | replace: '/', '' %}
+    {% for section in site.data.toc %}
+      {% assign section_url = section.url | replace: '/', '' %}
+      {% assign section_active = false %}
+      {% if section.url and page.url contains section.url %}{% assign section_active = true %}{% endif %}
+      <div class="nav-tree__group">
+        <a class="nav-tree__title{% if current == section_url or section_active %} active{% endif %}"
+           href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}">
+          {{ section.title }}
+        </a>
+        {% if section.links %}
+        <ul class="nav-tree__list">
+          {% for entry in section.links %}
+            {% assign entry_url = entry.url | replace: '/', '' %}
+            {% assign entry_active = false %}
+            {% if entry.url and page.url contains entry.url %}{% assign entry_active = true %}{% endif %}
+            <li class="nav-tree__item">
+              <a href="{% if entry.url %}{{ site.baseurl }}/{{ entry.url }}{% else %}{{ entry.external_url }}{% endif %}"
+                 class="{% if entry_active %}active{% endif %}">
+                {{ entry.title }}
+              </a>
+              {% if entry.children and entry_active %}
+                <ul class="nav-tree__sub">
+                  {% for child in entry.children %}
+                  <li>
+                    <a href="{% if child.url %}{{ site.baseurl }}/{{ child.url }}{% else %}{{ child.external_url }}{% endif %}"
+                       class="{% if page.url contains child.url %}active{% endif %}">
+                      {{ child.title }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </nav>
+</aside>
+<div class="sidebar-overlay" aria-hidden="true"></div>

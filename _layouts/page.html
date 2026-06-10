@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% if page.show_title != false and page.collection != 'docs' %}
+  <h1 style="margin-bottom:0.2em">{{ page.title }}</h1>
+  {% if page.badges %}<div style="margin: 0.4rem 0 0.6rem;">{% for badge in page.badges %}<span class="badge badge-{{ badge.type }}">{{ badge.tag }}</span> {% endfor %}</div>{% endif %}
+  {% if page.date %}<div class="post-date">{{ page.date | date: "%B %d, %Y" }}</div>{% endif %}
+{% endif %}
+
+{% if page.collection == 'docs' and page.tutorial_landing == true %}
+  {% include tutorial_banner.html %}
+{% endif %}
+
+{% include tags.html %}
+
+{{ content }}

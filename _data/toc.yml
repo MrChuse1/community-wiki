@@ -1,0 +1,62 @@
+# Sidebar navigation tree (grouped). Each group has a title, optional URL,
+# and a list of links. Links may have nested `children`.
+
+- title: Sounds
+  url: docs/sounds
+  links:
+    - title: Ambient Rooms
+      url: docs/sounds/ambient-rooms
+      description: Set up dynamic ambient sound rooms.
+    - title: Localized Audio
+      url: docs/sounds/localized-sounds
+      description: Localized sound asset setup.
+    - title: Using Music States
+      url: docs/sounds/music-states
+      description: Set up .mus files, aliases, and script-triggered music states.
+
+- title: Asset Types
+  url: docs/asset-types
+  links:
+    - title: Destructibles
+      url: docs/asset-types/destructibles
+      description: Destructible walls, vehicles and scripted set pieces.
+    - title: Weapon Attachments
+      url: docs/asset-types/weapon-attachments
+      description: Set up attachment assets and attachment unique assets for a weapon port.
+
+- title: Mapping
+  url: docs/mapping
+  links:
+    - title: Painting Volume Decals
+      url: docs/mapping/painting-volume-decals
+      description: Paint volume decals in Radiant for better material blending.
+
+- title: LUI
+  url: docs/lui
+  links:
+    - title: Positioning
+      url: docs/lui/positioning
+      description: Anchors, offsets, and parent-relative widget placement.
+
+- title: Tools
+  url: docs/software
+  links:
+    - title: Alchemist
+      url: docs/software/alchemist
+      description: Texture/material conversion utility.
+      children:
+        - title: Download Alchemist
+          url: docs/software/alchemist/alchemist-download
+        - title: Using Alchemist
+          url: docs/software/alchemist/alchemist-usage
+        - title: Shortcuts in Alchemist
+          url: docs/software/alchemist/alchemist-shortcuts
+
+- title: General
+  links:
+    - title: News
+      url: news
+    - title: Tags
+      url: tags
+    - title: About
+      url: about

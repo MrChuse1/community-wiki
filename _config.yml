@@ -1,0 +1,93 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: CoD Mods Wiki
+email: scobalula@gmail.com
+author: Blakintosh
+original_author: Philip/Scobalula
+description: > # this means to ignore newlines until "baseurl:"
+  A wiki dedicated to providing technical and general purpose information
+  on Call of Duty Modding with a focus on the Black Ops III Mod Tools.
+
+# Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# This is mostly for testing
+url: "https://wiki.codmods.com" # the base hostname & protocol for your site
+
+# Social (First three Required)
+repo: "https://github.com/Blakintosh/community-wiki"
+github_user: "Blakintosh"
+github_repo: "community-wiki"
+github_branch: "main"
+
+# Optional
+# twitter: scobalula
+# linkedin: vsochat
+# dockerhub: vanessa
+
+# Should there be feedback buttons at the bottom of pages?
+feedback: true
+
+# Link to a privacy policy in footer, uncomment and define if wanted
+# privacy: https://domain.com/privacy
+
+# google-analytics: UA-XXXXXXXXXX
+logo_pixels: 34
+
+# Theme accent (used by ::scrollbar / scroll-to-top fallback) — main palette lives in assets/css/main.css
+color: "#18181b"
+
+# Build settings
+markdown: kramdown
+
+# If you add tags to pages, define this variable to link them to some external search.
+# If you want to link to tags locally on the site, leave this commented out.
+# tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
+tag_color: secondary # primary, info, success, warning, danger, secondary
+
+permalink: /:year/:title/
+markdown: kramdown
+exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path
+
+# Defaults
+defaults:
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: page
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+# Extras
+default_embed_thumb: "/assets/img/logo_big.png"

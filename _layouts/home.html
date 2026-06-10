@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% if page.hero %}
+<section class="hero">
+  <div class="hero__inner">
+    {% if page.hero.eyebrow %}<span class="hero__eyebrow">{{ page.hero.eyebrow }}</span>{% endif %}
+    <h1 class="hero__title">{{ page.hero.title | default: page.title }}</h1>
+    {% if page.hero.lead %}<p class="hero__lead">{{ page.hero.lead }}</p>{% endif %}
+    {% if page.hero.cta %}
+    <div class="hero__cta">
+      {% for c in page.hero.cta %}
+        <a class="btn {% if c.primary %}btn--primary{% endif %}"
+           href="{% if c.url contains '://' %}{{ c.url }}{% else %}{{ site.baseurl }}{{ c.url }}{% endif %}"
+           {% if c.url contains '://' %}target="_blank" rel="noopener"{% endif %}>
+          {{ c.label }}
+        </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% include tags.html %}
+
+{{ content }}

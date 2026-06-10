@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+{% include head.html %}
+{% include google-analytics.html %}
+<body>
+  <div class="app">
+    {% include header.html %}
+
+    <div class="layout">
+      {% include sidebar.html %}
+
+      <main class="main{% if page.hero %} main--has-hero{% endif %}{% if page.hero and page.url != '/' and page.show_breadcrumbs != false %} main--hero-with-crumbs{% endif %}" role="main">
+        {% if page.url != '/' and page.show_breadcrumbs != false %}
+          <nav class="d-print-none" aria-label="breadcrumb">
+            <ol class="breadcrumbs">
+              <li><a href="{{ site.baseurl }}/">Home</a></li>
+              {% assign crumbs = page.url | append: '/' | replace: '//', '/' | split: '/' %}
+              {% for crumb in crumbs offset: 1 %}{% if crumb != 'index' and crumb != '' %}
+                {% if forloop.last %}
+                  <li class="active">{{ page.title }}</li>
+                {% else %}
+                  <li>
+                    <a href="{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">
+                      {% if crumb == 'docs' %}Documentation{% else %}{{ crumb | replace: '-', ' ' | replace: '_', ' ' | capitalize }}{% endif %}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endif %}{% endfor %}
+            </ol>
+          </nav>
+        {% endif %}
+
+        <article class="content">
+          {{ content }}
+
+          {% if section.links %}
+          <div class="card-grid">
+            {% for child in section.links %}
+              <a class="card" href="{% if child.url %}{{ site.baseurl }}{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">
+                <div class="card__title">{{ child.title }}</div>
+                {% if child.description %}<p class="card__desc">{{ child.description }}</p>{% endif %}
+              </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if page.layout != 'home' %}{% include feedback.html %}{% endif %}
+        </article>
+
+        <button class="toc-toggle d-print-none" type="button" aria-controls="TableOfContents" aria-expanded="false">
+          On this page
+        </button>
+      </main>
+
+      <aside class="toc-rail d-print-none" aria-label="On this page">
+        {% include editable.html %}
+        <h6 class="toc-title">On this page</h6>
+        <nav id="TableOfContents"><ul></ul></nav>
+      </aside>
+
+      <div class="toc-overlay d-print-none" aria-hidden="true"></div>
+    </div>
+
+    {% include footer.html %}
+  </div>
+
+  {% include scrolltop.html %}
+  {% include scripts.html %}
+</body>
+</html>

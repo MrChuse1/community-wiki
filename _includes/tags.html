@@ -1,0 +1,10 @@
+{% if page.tags %}
+<div class="page-tags" style="margin: 0.6rem 0 1.5rem; display:flex; gap:0.4rem; flex-wrap:wrap;">
+  {% for tag in page.tags %}
+    <a class="badge badge-{{ site.tag_color | default: 'secondary' }}"
+       href="{% if site.tag_search_endpoint %}{{ site.tag_search_endpoint }}{{ tag }}{% else %}{{ site.baseurl }}/tags/#{{ tag }}{% endif %}">
+      {{ tag }}
+    </a>
+  {% endfor %}
+</div>
+{% endif %}

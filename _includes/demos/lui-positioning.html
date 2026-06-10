@@ -1,0 +1,113 @@
+<div class="lui-positioning-demo" data-lui-positioning-demo>
+  <div class="lui-demo__top">
+    <div>
+      <div class="lui-demo__eyebrow">Interactive demo</div>
+      <div class="lui-demo__title">LUI positioning sandbox</div>
+    </div>
+    <div class="lui-demo__summary" data-lui-summary aria-live="polite"></div>
+  </div>
+
+  <div class="lui-demo__presets" aria-label="Positioning examples">
+    <button type="button" data-lui-preset="1">Example 1</button>
+    <button type="button" data-lui-preset="2">Example 2</button>
+    <button type="button" data-lui-preset="3">Example 3</button>
+    <button type="button" data-lui-preset="4">Example 4</button>
+    <button type="button" data-lui-preset="5">Example 5</button>
+    <button type="button" data-lui-preset="6">Example 6</button>
+  </div>
+
+  <div class="lui-demo__grid">
+    <div class="lui-demo__visual-panel">
+      <div class="lui-demo__stage" role="img" aria-label="Scaled LUI root viewport showing a parent widget and positioned child widget.">
+        <div class="lui-demo__root">
+          <span class="lui-demo__root-label">UI Root 1280 x 720</span>
+          <div class="lui-demo__parent" data-lui-parent>
+            <span class="lui-demo__parent-label">Parent</span>
+            <span class="lui-demo__anchor-line lui-demo__anchor-line--x" data-lui-anchor-x-a></span>
+            <span class="lui-demo__anchor-line lui-demo__anchor-line--x lui-demo__anchor-line--secondary" data-lui-anchor-x-b></span>
+            <span class="lui-demo__anchor-line lui-demo__anchor-line--y" data-lui-anchor-y-a></span>
+            <span class="lui-demo__anchor-line lui-demo__anchor-line--y lui-demo__anchor-line--secondary" data-lui-anchor-y-b></span>
+            <div class="lui-demo__child" data-lui-child>
+              <span>Child</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lui-demo__legend" aria-label="Visual legend">
+        <span><i class="lui-demo__legend-mark lui-demo__legend-mark--parent"></i>Parent</span>
+        <span><i class="lui-demo__legend-mark lui-demo__legend-mark--child"></i>Child</span>
+        <span><i class="lui-demo__legend-mark lui-demo__legend-mark--anchor"></i>Anchor lines</span>
+      </div>
+
+      <div class="lui-demo__metrics" aria-label="Computed widget values">
+        <div><span>Left</span><strong data-lui-metric="left">0</strong></div>
+        <div><span>Right</span><strong data-lui-metric="right">0</strong></div>
+        <div><span>Width</span><strong data-lui-metric="width">0</strong></div>
+        <div><span>X Anchors</span><strong data-lui-metric="x-anchors">0, 0</strong></div>
+        <div><span>Top</span><strong data-lui-metric="top">0</strong></div>
+        <div><span>Bottom</span><strong data-lui-metric="bottom">0</strong></div>
+        <div><span>Height</span><strong data-lui-metric="height">0</strong></div>
+        <div><span>Y Anchors</span><strong data-lui-metric="y-anchors">0.5, 0.5</strong></div>
+      </div>
+    </div>
+
+    <div class="lui-demo__controls" aria-label="Positioning controls">
+      <fieldset>
+        <legend>Parent</legend>
+        <div class="lui-demo__input-grid">
+          <label><span>Left</span><input type="number" data-lui-control="parent-left" value="340"></label>
+          <label><span>Top</span><input type="number" data-lui-control="parent-top" value="110"></label>
+          <label><span>Width</span><input type="number" min="40" data-lui-control="parent-width" value="600"></label>
+          <label><span>Height</span><input type="number" min="40" data-lui-control="parent-height" value="400"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>setLeftRight</legend>
+        <div class="lui-demo__segmented" data-lui-axis="x" aria-label="Horizontal anchor mode">
+          <button type="button" data-lui-mode="left">Left</button>
+          <button type="button" data-lui-mode="right">Right</button>
+          <button type="button" data-lui-mode="center">Center</button>
+          <button type="button" data-lui-mode="double">Double</button>
+          <button type="button" data-lui-mode="custom">Custom</button>
+        </div>
+        <div class="lui-demo__input-grid lui-demo__input-grid--anchors">
+          <label><span>leftAnchor</span><input type="number" min="0" max="1" step="0.05" data-lui-control="x-anchor-a" value="0"></label>
+          <label><span>rightAnchor</span><input type="number" min="0" max="1" step="0.05" data-lui-control="x-anchor-b" value="0"></label>
+        </div>
+        <div class="lui-demo__input-grid">
+          <label><span>leftOffset</span><input type="number" data-lui-control="x-left" value="12"></label>
+          <label><span>rightOffset</span><input type="number" data-lui-control="x-right" value="48"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>setTopBottom</legend>
+        <div class="lui-demo__segmented" data-lui-axis="y" aria-label="Vertical anchor mode">
+          <button type="button" data-lui-mode="top">Top</button>
+          <button type="button" data-lui-mode="bottom">Bottom</button>
+          <button type="button" data-lui-mode="center">Center</button>
+          <button type="button" data-lui-mode="double">Double</button>
+          <button type="button" data-lui-mode="custom">Custom</button>
+        </div>
+        <div class="lui-demo__input-grid lui-demo__input-grid--anchors">
+          <label><span>topAnchor</span><input type="number" min="0" max="1" step="0.05" data-lui-control="y-anchor-a" value="0.5"></label>
+          <label><span>bottomAnchor</span><input type="number" min="0" max="1" step="0.05" data-lui-control="y-anchor-b" value="0.5"></label>
+        </div>
+        <div class="lui-demo__input-grid">
+          <label><span>topOffset</span><input type="number" data-lui-control="y-top" value="-45"></label>
+          <label><span>bottomOffset</span><input type="number" data-lui-control="y-bottom" value="45"></label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="lui-demo__readout">
+    <div class="lui-demo__calls">
+      <code data-lui-call="x"></code>
+      <code data-lui-call="y"></code>
+    </div>
+    <div class="lui-demo__formula" data-lui-formula></div>
+  </div>
+</div>
