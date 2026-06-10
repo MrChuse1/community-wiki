@@ -34,6 +34,9 @@
 - title: LUI
   url: docs/lui
   links:
+    - title: Getting Started
+      url: docs/lui/1_getting_started_with_ui_development
+      description: Getting Started with Lua UI development in Black Ops 3.
     - title: Positioning
       url: docs/lui/positioning
       description: Anchors, offsets, and parent-relative widget placement.
