@@ -158,7 +158,12 @@ strong, b { color: #f0f2f5; font-weight: 600; }
 hr {
   border: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+  background: linear-gradient(
+          90deg,
+          color-mix(in srgb, var(--border-strong) 50%, transparent),
+          var(--border-strong),
+          color-mix(in srgb, var(--border-strong) 50%, transparent)
+  );
   margin: 2em 0;
 }
 
