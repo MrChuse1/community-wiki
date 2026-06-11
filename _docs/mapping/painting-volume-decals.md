@@ -71,4 +71,4 @@ Now that you have the right settings and texture, you can go into the Advanced P
 
 ## Resources
 
-[Open the original Painting Volume Decals PDF](/assets/files/painting-volume-decals.pdf)
+[Open the original Painting Volume Decals PDF](/assets/files/mapping/painting-volume-decals.pdf)

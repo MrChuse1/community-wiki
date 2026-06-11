@@ -43,8 +43,8 @@ After that, we'll dive deeper into connecting UI elements to live game data, suc
 In order to work with Lua UI in Black Ops 3, you will need to download the following files:
 
 1. [L3akMod](https://dtzxporter.com/tools/l3akmod)
-2. <a class="download-button" href="/assets/files/T7Hud_zm_factory.lua" download>
-   Download Main HUD Lua File
+2. <a class="download-button" href="/assets/files/lui/T7Hud_zm_factory.lua" download>
+   Main HUD Lua File
    </a>
 
 ---
