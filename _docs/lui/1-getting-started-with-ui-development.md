@@ -55,4 +55,8 @@ Visit the L3akMod download page and follow the installation instructions provide
 
 ---
 
-> **Next step:** Once both requirements have been installed and downloaded, you're ready to move on to the next section, where we'll be setting up the Lua files in your map.
+> **Note:** Once both requirements have been installed and downloaded, you're ready to move on to the next section, where we'll be setting up the Lua files in your map.
+
+---
+
+> **Next step:** [Setting up Lua files in your map](/docs/lui/2-setting-up-lua-files-in-your-map)
