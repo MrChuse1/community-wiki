@@ -58,8 +58,8 @@
           url: docs/software/alchemist/alchemist-download
         - title: Using Alchemist
           url: docs/software/alchemist/alchemist-usage
-        - title: Shortcuts in Alchemist
-          url: docs/software/alchemist/alchemist-shortcuts
+        - title: Buttons in Alchemist
+          url: docs/software/alchemist/alchemist-buttons-and-shortcuts
 
 - title: General
   links:
