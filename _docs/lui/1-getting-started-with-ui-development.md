@@ -18,7 +18,7 @@ discord:
 
 ---
 
-Creating custom UI in Black Ops 3 can seem intimidating at first, but once you understand the basic setup, it becomes much easier to build your own HUDs, menus, text displays, and images.
+Creating custom UI in Black Ops 3 can seem intimidating at first, but once you understand the basic setup, it becomes much easier to build your own HUDs, menus, text displays, and images. This guide assumes a basic level of scripting knowledge or higher.
 
 ---
 

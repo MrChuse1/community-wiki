@@ -69,7 +69,7 @@ Inside this directory, create a new folder named: `ui`
 
 For reference, here is an example of a clean and scalable UI structure:
 
-```
+```text
 ui/uieditor/menus/hud/T7Hud_zm_asylum.lua
 ui/uieditor/widgets/HUD/ZM_Asylum_AmmoWidget/ZM_Asylum_AmmoContainer.lua
 ui/uieditor/widgets/HUD/ZM_Asylum_ScoreWidget/ZM_Asylum_ScoreContainer.lua
@@ -129,4 +129,4 @@ As before, replace the path with the location of your own Lua file.
 
 ---
 
-> **Next step: Creating and adding custom HUD widgets**
+> **Next step: [Creating and adding custom HUD widgets](/docs/lui/3-creating-and-adding-custom-hud-widgets)**
