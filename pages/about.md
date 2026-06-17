@@ -10,7 +10,7 @@ This site is published with [Jekyll](https://jekyllrb.com/) using a custom in-ho
 
 ## Support
 
-If you need help, please don't hesitate to [open an issue]({{ site.repo }}/issues) or join us on [Discord](https://discord.gg/J5fYbruWdN).
+If you need help, please don't hesitate to [open an issue]({{ site.repo }}/issues) or join us on [Discord](https://discord.gg/tzzn6zAVBz).
 
 ## Contributing
 

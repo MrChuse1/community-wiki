@@ -12,7 +12,7 @@ hero:
       url: /docs/
       primary: true
     - label: Join Discord
-      url: https://discord.gg/J5fYbruWdN
+      url: https://discord.gg/tzzn6zAVBz
 ---
 
 <div class="card-grid">
