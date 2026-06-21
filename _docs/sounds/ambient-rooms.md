@@ -29,9 +29,7 @@ This tutorial will show you how to add Ambient Rooms to your map, these will all
 
 {% include alert.html type="primary" title="Note" content="For Ambient Rooms to work you must have your weapon aliases set up properly using Contexts, Reverb settings, etc. All stock weapons are set up correctly for ambient rooms." %}
 
-{% include alert.html title="Ambient Example" type="info" content="An example of a map using ambient rooms can be downloaded [Here](https://mega.nz/file/07wB2YSL#dl3vd5y-DterveyG_89wVacxX57h-JSOkwpwC65Mqgw)." %}
-
-{% include alert.html title="Ambient Example" type="info" content="An example of an ambient file can be downloaded [Here](https://mega.nz/file/A6Zx3aAR#2jU0caM89xsSrJRJ4C5Dy8T6hmGJcxIQwpYWPHeYgBo). This example file is included in the map example above as well." %}
+{% include alert.html title="Ambient Example" type="info" content="An example of a map using ambient rooms can be downloaded [Here](/assets/files/sounds/ambient_rooms_example_map.zip)." %}
 
 To start go to `Call of Duty Black Ops III\share\raw\sound\ambients` and make a copy of the file `ambient_mod.csv` and name it whatever you like, you can also use the example provided above if you wish.
 
