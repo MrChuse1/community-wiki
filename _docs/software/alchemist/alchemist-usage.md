@@ -71,7 +71,7 @@ Now we have our source files, we can open Alchemist and start to build our anima
 
 Once you open Alchemist you will start with a blank project, I first recommend you click the save icon or press C on your keyboard to save as new file. If you made the folders I suggested earlier, you can save this file in the Project Files folder, and make sure to give it a meaningful name, for example if I was doing the animations for the M4 from MW2022 (IW9) I'd call it iw9_ar_mike4 or something like that.
 
-Now that our file is saved, we can intermittently save it using the B key on your keyboard or the save icon on the top bar (all shortcuts are listed on the "Using Alchemist" page) so that we don't lose progress.
+Now that our file is saved, we can intermittently save it using the B key on your keyboard or the save icon on the top bar (all shortcuts are listed in [Buttons in Alchemist](/docs/software/alchemist/alchemist-buttons-and-shortcuts)) so that we don't lose progress.
 
 Next, we can now drag and drop all of the base animations we want to use into Alchemist to start editing them. In this guide I will mostly cover just simple additives like sprints, but I will usually process all animations using Alchemist to solve IK at the least (even anims like idle and raise/drop etc).
 
@@ -101,7 +101,7 @@ Make sure to set the right animation for left and right hand (if you plan on usi
 
 ## Attachment IK Handling
 
-If you are using an attachment pose, you can either set the Left Hand IK Target Bone line on the IK settings column to the name of the bone that the attachment uses (such as tag_ik_loc_le_grip) to use IK to put the hand there, or you can click the settings COD on the top bar and set the project's global IK bone (this is usually better in most cases as you don't have to set it for every single animations).
+If you are using an attachment pose, you can either set the Left Hand IK Target Bone line on the IK settings column to the name of the bone that the attachment uses (such as tag_ik_loc_le_grip) to use IK to put the hand there, or you can click the settings cog on the top bar and set the project's global IK bone (this is usually better in most cases as you don't have to set it for every single animations).
 
 ![IK Bone in Maya](/assets/img/software/alchemist/alchemist-guide-image-7.png)
 
