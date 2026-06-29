@@ -13,7 +13,7 @@ When you convert a model, it will place it will create its own folder inside the
 If the model is from Fab, the LOD suffix will be stripped from the name.
 
 ## Meshes
-When you drag a USDZ model, the meshes will be converted to a single xmodel_bin file.
+When you drag a USDZ model, the meshes will be converted to a single `xmodel_bin` file.
 
 ## Materials and Textures
 Any materials used on the meshes will be converted to Black Ops III properties. Each map will prioritise an input texture but if one is not assigned, it will use the value.

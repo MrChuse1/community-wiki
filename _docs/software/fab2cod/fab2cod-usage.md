@@ -8,7 +8,7 @@ tags:
   - converter
 ---
 ## Introduction
-Fab2Cod allows you to quickly convert USDZ files to xmodel_bin files along with textures. All assets from a model, including mesh, materials, and textures, will be setup in a gdt file in the same directory.
+Fab2Cod allows you to quickly convert USDZ files to `xmodel_bin` files along with textures. All assets from a model, including mesh, materials, and textures, will be setup in a gdt file in the same directory.
 
 ## Options and Flags
 
