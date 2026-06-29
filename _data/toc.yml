@@ -64,10 +64,10 @@
       url: docs/software/fab2cod
       description: USDZ file converter.
       children:
-      - title: Using Fab2Cod
-        url: docs/software/fab2cod/fab2cod-usage
-      - title: Outputs
-        url: docs/software/fab2cod/fab2cod-outputs
+        - title: Using Fab2Cod
+          url: docs/software/fab2cod/fab2cod-usage
+        - title: Outputs
+          url: docs/software/fab2cod/fab2cod-outputs
 
 - title: General
   links:
